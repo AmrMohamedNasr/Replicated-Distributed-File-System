@@ -20,6 +20,7 @@ import request.WriteRequest;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -43,6 +44,9 @@ public class Client {
 	
 	public static void main(String[] args) throws NotBoundException, 
 		IOException, MessageNotFoundException {
+		PrintStream st = new PrintStream(args[0] + "log.txt");
+		System.setOut(st);
+		System.setErr(st);
 		Client c = new Client (args[0]);
 		c.start();
 		System.out.println("Client has done all his transactions");

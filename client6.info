@@ -1,0 +1,14 @@
+master.port 8080
+master.ip 127.0.0.1
+TransactionsNum 3
+T1 B_newfile.txt
+T1 W_newfile.txt
+1
+data1
+T1 C
+T2 B_newfile.txt
+T2 R_newfile.txt
+T2 C
+T3 B_newfile2.txt
+T3 R_newfile2.txt
+T3 C
